@@ -1,0 +1,15 @@
+.navbar {
+  background: var(--primary);
+  padding: 20px;
+  color: #fff;
+}
+.navbar nav {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.navbar a.brand {
+  margin-right: auto;
+  color: #fff;
+  text-decoration: none;
+}

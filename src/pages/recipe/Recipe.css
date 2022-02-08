@@ -1,0 +1,30 @@
+.recipe .card > *:not(.description) {
+  text-align: center;
+}
+
+.recipe .card ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.recipe .card ul li {
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 0.3em 1em;
+}
+
+.recipe .card .description {
+  padding: 0 2em;
+}
+
+/* MOBILE make description more compact */
+@media screen and (max-width: 600px) {
+  .recipe .card .description {
+    padding: 0;
+  }
+}

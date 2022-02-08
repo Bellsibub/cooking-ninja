@@ -1,0 +1,26 @@
+.recipe-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.recipe-list .card {
+  flex: 1 0 calc(100% / 5);
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.recipe-list .card p,
+.recipe-list .card h3,
+.recipe-list .card a {
+  margin: 0.5em 0;
+}
+
+.recipe-list .card .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
