@@ -1,0 +1,26 @@
+.create .card form {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0 auto;
+  width: calc(100% - 400px);
+}
+
+form .form__input {
+  margin-bottom: 20px;
+}
+
+form .form__input span {
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 1200px) {
+  .create .card form {
+    width: calc(100% - 200px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .create .card form {
+    width: calc(100% - 20px);
+  }
+}

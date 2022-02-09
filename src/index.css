@@ -34,6 +34,11 @@ textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
+  resize: none;
+  outline: none !important;
+}
+input:focus-visible, textarea:focus-visible {
+  border-color: var(--primary) !important;
 }
 
 .loading,
@@ -42,29 +47,32 @@ textarea {
   margin: 40px auto;
 }
 
-/* Link Button */
-a.link-button {
+/* Styled button and links */
+.stl_button {
+  font-size: 1em;
   color: #fff;
   background: var(--primary);
   text-decoration: none;
-  margin-left: 40px;
-  padding: 10px;
+  padding: .5em 1em;
   border: 1px solid var(--primary);
   border-radius: 8px;
   text-align: center;
   width: fit-content;
   transition: all ease-in .3s;
 }
-a.link-button:hover {
+.stl_button:hover, .stl_button--outline:hover {
+  cursor: pointer;
+}
+.stl_button:hover {
   background: transparent;
   color: var(--primary);
 }
-a.link-button--outline {
+.stl_button--outline {
   color: #fff;
   background: transparent;
   border: 1px solid #fff;
 }
-a.link-button--outline:hover {
+.stl_button--outline:hover {
   background: #fff;
   color: #333;
 }
@@ -90,7 +98,7 @@ a.link-button--outline:hover {
   line-height: 1.4em;
 }
 
-.card .link-button {
+.card .stl_button {
   align-self: center;
 }
 
