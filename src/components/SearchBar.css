@@ -1,0 +1,24 @@
+.search-bar {
+  display: flex;
+}
+
+.search-bar input {
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  padding: 8px 0;
+}
+
+.search-bar input::placeholder { 
+  color: white;
+}
+.search-bar input:focus-visible {
+  border-bottom: 2px solid white !important;
+}
+
+.search-bar button:hover {
+  color: white;
+  border: 1px solid white;
+}
