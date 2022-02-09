@@ -9,9 +9,25 @@ form .form__input {
   margin-bottom: 20px;
 }
 
-form .form__input span {
+form .form__input .input__header {
   line-height: 2em;
   font-size: 1.2em;
+}
+
+.form__input .input__multiples {
+  display: flex;
+  align-items: center;
+}
+
+.form__input .input__multiples .stl_button {
+  margin-left: 10px;
+}
+
+.form__input .input__details {
+  margin-top: 10px;
+}
+.input__details span {
+  font-style: italic;
 }
 
 @media screen and (max-width: 1200px) {

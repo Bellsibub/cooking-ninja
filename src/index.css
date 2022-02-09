@@ -50,6 +50,7 @@ input:focus-visible, textarea:focus-visible {
 /* Styled button and links */
 .stl_button {
   font-size: 1em;
+  letter-spacing: .1em;
   color: #fff;
   background: var(--primary);
   text-decoration: none;
@@ -58,7 +59,14 @@ input:focus-visible, textarea:focus-visible {
   border-radius: 8px;
   text-align: center;
   width: fit-content;
-  transition: all ease-in .3s;
+  transition: background ease-in .3s, color ease-in .3s;
+}
+.stl_button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -2px;
+}
+.stl_button--outline-primary:focus-visible {
+  outline-color: var(--primary);
 }
 .stl_button:hover, .stl_button--outline:hover {
   cursor: pointer;
@@ -68,13 +76,22 @@ input:focus-visible, textarea:focus-visible {
   color: var(--primary);
 }
 .stl_button--outline {
-  color: #fff;
   background: transparent;
   border: 1px solid #fff;
 }
 .stl_button--outline:hover {
   background: #fff;
   color: #333;
+}
+.stl_button--outline-primary {
+  color: var(--primary);
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--primary);
+}
+.stl_button--outline-primary:hover {
+  background: var(--primary);
+  color: white;
 }
 
 /* Card */
