@@ -14,7 +14,7 @@ const Navbar = () => {
           <h1>Cooking Ninja</h1>
         </Link>
         <SearchBar />
-        <Link to="/create" className="stl_button stl_button--outline">
+        <Link to="/create" className="stl_button stl_button--outline-primary">
           Create Recipe
         </Link>
       </nav>

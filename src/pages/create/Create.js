@@ -76,7 +76,7 @@ const Create = () => {
                 />
                 <button
                   type="button"
-                  className="stl_button stl_button--outline-primary"
+                  className="stl_button"
                   onClick={handleAdd}>
                   Add
                 </button>

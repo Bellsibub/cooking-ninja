@@ -12,7 +12,7 @@
 }
 
 .recipe .card ul li {
-  color: #fff;
+  color: var(--textColorLight);
   background-color: var(--primary);
   border-radius: 8px;
   padding: 0.3em 1em;

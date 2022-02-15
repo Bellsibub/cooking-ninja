@@ -1,8 +1,9 @@
 ☐ Course Iteration
 Iteration 1:
-  
+  ☐ Refactor styling to use styled-components
 Iteration 2:
-  
+  ☐ change data type to be something unique
+  ☐ create a db to get data from statically (i.e. so we can test functionality in a live preview without devserver) 
 
 Portfolio:
   ☐ Readme

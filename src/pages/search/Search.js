@@ -4,9 +4,6 @@ import { useFetch } from '../../hooks/useFetch';
 // components
 import RecipeList from '../../components/RecipeList';
 
-// styles
-import './Search.css';
-
 const Search = () => {
   const { search } = useLocation();
   const searchString = new URLSearchParams(search).get('q');

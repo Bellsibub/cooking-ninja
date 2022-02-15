@@ -1,7 +1,7 @@
 .navbar {
   background: var(--primary);
   padding: 20px;
-  color: #fff;
+  color: var(--textColorLight);
 }
 .navbar nav {
   display: flex;
@@ -11,6 +11,6 @@
 }
 .navbar a.brand {
   margin-right: auto;
-  color: #fff;
+  color: var(--textColorLight);
   text-decoration: none;
 }

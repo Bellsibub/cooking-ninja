@@ -1,0 +1,40 @@
+.theme-selector {
+  display: flex;
+  gap: 0.5em;
+  margin: 30px auto 0 auto !important;
+}
+
+.theme-button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: none;
+}
+
+.theme-button.prime1 {
+  background: #0074E8;
+}
+.theme-button.prime2 {
+  background: #58249c;
+}
+.theme-button.prime3 {
+  background: #008080;
+}
+
+.theme-button:nth-of-type(2) {
+  margin-left: auto;
+}
+
+.theme-button:hover {
+  cursor: pointer;
+  outline: 2px solid var(--textColorDarkSoft);
+}
+.theme-button:focus-visible {
+  outline: 2px solid var(--textColorDarkSoft);
+}
+
+.theme-button.dark > img {
+  filter: invert(1);
+}

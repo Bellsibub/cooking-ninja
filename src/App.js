@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { useTheme } from './hooks/useTheme';
 
 // pages
 import Home from './pages/home/Home';
@@ -8,15 +9,18 @@ import Search from './pages/search/Search';
 
 // components
 import Navbar from './components/Navbar';
+import ThemeSelector from './components/ThemeSelector';
 
 // styles
 import './App.css';
 
 function App() {
+  const { mode, color } = useTheme();
   return (
-    <div className="App">
+    <div className={`App ${mode} color-${color}`}>
       <BrowserRouter>
         <Navbar />
+        <ThemeSelector />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/create" component={Create} />
