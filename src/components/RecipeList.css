@@ -12,8 +12,7 @@
 }
 
 .recipe-list .card p,
-.recipe-list .card h3,
-.recipe-list .card a {
+.recipe-list .card h3 {
   margin: 0.5em 0;
 }
 

@@ -1,6 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useFetch } from '../../hooks/useFetch';
+import { db } from '../../firebase/config';
+
 // styles
 import './Create.css';
 
@@ -10,17 +11,31 @@ const Create = () => {
   const [ingredients, setIngredients] = useState(null);
   const [method, setMethod] = useState('');
   const [cookingTime, setCookingTime] = useState(0);
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   const ingredientInput = useRef(null);
   const history = useHistory();
 
-  const { postData, data, error, loading } = useFetch(
-    'http://localhost:3000/recipes',
-    'POST'
-  );
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    postData({ title, ingredients, method, cookingTime: cookingTime + ' minutes' });
+    setLoading(true);
+    db.collection('recipes')
+      .add({
+        title,
+        ingredients,
+        method,
+        cookingTime: cookingTime + ' minutes',
+      })
+      .then((doc) => {
+        setLoading(false);
+        history.push(`/recipes/${doc.id}`);
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error.message);
+      });
   };
 
   const handleAdd = () => {
@@ -33,12 +48,6 @@ const Create = () => {
     setNewIngredient('');
     ingredientInput.current.focus();
   };
-
-  useEffect(() => {
-    if (data) {
-      history.push('/');
-    }
-  }, [data, history]);
 
   return (
     <section className="content-wrapper create">
@@ -74,10 +83,7 @@ const Create = () => {
                   }}
                   ref={ingredientInput}
                 />
-                <button
-                  type="button"
-                  className="stl_button"
-                  onClick={handleAdd}>
+                <button type="button" className="stl_button" onClick={handleAdd}>
                   Add
                 </button>
               </div>

@@ -93,6 +93,12 @@ textarea:focus-visible {
   font-weight: 600;
   transition: all ease-in 0.3s;
 }
+.stl_button--compact {
+  padding: 0.25em .5em;
+}
+.stl_button--circle {
+  border-radius: 50%;
+}
 .stl_button:focus-visible {
   outline: 2px solid var(--textColorLight);
   outline-offset: -2px;
@@ -111,7 +117,8 @@ textarea:focus-visible {
 }
 .stl_button--outline {
   background: transparent;
-  border: 1px solid var(--textColorLight);
+  border: 1px solid var(--textColorDark);
+  color: var(--textColorDark)
 }
 .stl_button--outline:hover {
   background: var(--primary);
@@ -130,12 +137,22 @@ textarea:focus-visible {
 
 /* Card */
 .card {
+  position: relative;
   background-color: var(--backgroundColorCard);
   padding: 1.5em;
   display: flex;
   flex-flow: column wrap;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+/* .card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+.card-options {
+  position: absolute;
+  right: 1.5em;
 }
 .card .card-title {
   margin: 40px auto;
@@ -149,8 +166,9 @@ textarea:focus-visible {
   line-height: 1.4em;
 }
 
-.card .stl_button {
+.card .action-button {
   align-self: center;
+  margin-top: auto;
 }
 
 /* A wrapper class for any content so they all have the same width and margin */

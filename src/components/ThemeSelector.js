@@ -5,7 +5,7 @@ import './ThemeSelector.css';
 const themeColors = ['prime1', 'prime2', 'prime3'];
 
 const ThemeSelector = () => {
-  const { changeColor, toggleMode, mode, color } = useTheme();
+  const { changeColor, toggleMode, mode } = useTheme();
   return (
     <div className="theme-selector content-wrapper">
       <button className={`theme-button ${mode}`} onClick={toggleMode}>
